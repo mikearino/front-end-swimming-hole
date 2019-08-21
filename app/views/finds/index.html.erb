@@ -1,0 +1,11 @@
+<h1>Swimming Hole Finder</h1>
+<% if @locations.any? %>
+<ul>
+  <% @locations.each do | location | %>
+  <li><%=link_to location["name"] %></li>
+  <p>  <%=location["content"] %></p>
+  <% end %>
+</ul>
+<%else %>
+<p>No current locations</p>
+<%end %>
